@@ -1,0 +1,10 @@
+[project]
+name = "apify-google-flights-api"
+version = "0.1.0"
+description = "Google Flights API - Access Google Flights Using Python"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "apify-client>=2.3.0",
+    "python-dotenv>=1.2.1",
+]
