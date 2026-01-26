@@ -64,4 +64,4 @@ python google-flights-api.py
 [**Made with ❤️**](https://apify.com/johnvc?fpr=9n7kx3)
 
 *Transform your flight search automation with the most reliable and efficient Google Flights search scraper on the market.*
-Last Updated: 2025.11.20
+Last Updated: 2026.01.26
