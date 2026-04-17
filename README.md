@@ -9,7 +9,7 @@ You can run this using pay [per event pricing here](https://apify.com/johnvc/goo
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.7 or higher
+- Python 3.10 or higher
 - An Apify account and API key
 
 ### Setup Instructions
@@ -20,23 +20,15 @@ You can run this using pay [per event pricing here](https://apify.com/johnvc/goo
    cd Apify-Google-Flights-API
    ```
 
-2. **Create a virtual environment (recommended)**
+2. **Create a virtual environment with `uv` (recommended)**
    ```bash
-   # Using venv (Python 3.3+)
-   python -m venv venv
-   
-   # Activate the virtual environment
-   # On macOS/Linux:
-   source venv/bin/activate
-   # On Windows:
-   venv\Scripts\activate
+   uv venv
+   source .venv/bin/activate
    ```
 
-3. **Install dependencies**
+3. **Install dependencies with `uv`**
    ```bash
-   # Install from requirements.txt
-   pip install -r requirements.txt
-
+   uv pip install -r requirements.txt
    ```
 
 4. **Configure your API key**
@@ -48,16 +40,32 @@ You can run this using pay [per event pricing here](https://apify.com/johnvc/goo
    # Get your API key from: https://apify.com?fpr=9n7kx3
    ```
 
-5. **Run the example**
+5. **Run the basic example**
    ```bash
    python google-flights-api.py
    ```
+
+6. **Run the booking-options example (`BOS -> PQI`)**
+   ```bash
+   python google-flights-get-booking-options.py
+   ```
+
+## Daily Low-Cost Booking Options Test
+
+`google-flights-get-booking-options.py` demonstrates booking options using:
+- `departure_id="BOS"`
+- `arrival_id="PQI"`
+- `fetch_booking_options=true`
+- `max_pages=1`
+
+Because this route is run only once per day, it is a low-cost way to verify
+that booking-option extraction and booking links are still working end to end.
 
 ### Alternative: Direct API Key Usage
 If you prefer not to use a `.env` file, you can set the environment variable directly:
 ```bash
 export APIFY_API_TOKEN="your_api_key_here"
-python google-flights-api.py
+python google-flights-get-booking-options.py
 ```
 [https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search](https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search?fpr=9n7kx3)
 
