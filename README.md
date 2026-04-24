@@ -72,4 +72,4 @@ python google-flights-get-booking-options.py
 [**Made with ❤️**](https://apify.com/johnvc?fpr=9n7kx3)
 
 *Transform your flight search automation with the most reliable and efficient Google Flights search scraper on the market.*
-Last Updated: 2026.04.23
+Last Updated: 2026.04.24
