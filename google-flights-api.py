@@ -20,12 +20,13 @@ client = ApifyClient(os.getenv("APIFY_API_TOKEN"))
 run_input = {
     "departure_id": "LAX",
     "arrival_id": "JFK",
-    "outbound_date": "2025-12-15",
+    "outbound_date": "2026-06-17",
     "adults": 1,
     "currency": "USD",
     "hl": "en",
     "gl": "us",
     "max_pages": 1,
+    "fetch_booking_options": True,
 }
 
 # Run the Actor and wait for it to finish
