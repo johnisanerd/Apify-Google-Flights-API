@@ -1,8 +1,8 @@
 """Run a simple, low-cost BOS->PQI booking options test.
 
 Docs:
-- https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search
-- https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search/input-schema
+- https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search?fpr=9n7kx3
+- https://apify.com/johnvc/google-flights-data-scraper-flight-and-price-search/input-schema?fpr=9n7kx3
 
 This script runs a one-way search with ``fetch_booking_options=true``,
 pretty-prints results, and saves them to a local JSON file.
@@ -20,12 +20,6 @@ from apify_client import ApifyClient
 from dotenv import load_dotenv
 
 ACTOR_ID = "johnvc/google-flights-data-scraper-flight-and-price-search"
-
-
-class ActorRun(TypedDict):
-    """Subset of Actor run fields used by this example."""
-
-    defaultDatasetId: str
 
 
 class RunInput(TypedDict):
@@ -169,9 +163,11 @@ def main() -> None:
     outbound_date = (date.today() + timedelta(days=30)).isoformat()
     run_input = build_run_input(outbound_date=outbound_date)
     client = get_client()
-    run: ActorRun = client.actor(ACTOR_ID).call(run_input=run_input)
+    run = client.actor(ACTOR_ID).call(run_input=run_input)
+    if run is None:
+        raise SystemExit("The Actor run did not return a result.")
 
-    dataset_id = run["defaultDatasetId"]
+    dataset_id = run.default_dataset_id
     print(f"Dataset URL: https://console.apify.com/storage/datasets/{dataset_id}")
 
     items = fetch_items(client=client, dataset_id=dataset_id)
