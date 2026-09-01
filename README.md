@@ -373,4 +373,4 @@ More help: https://docs.apify.com/platform/integrations/mcp
 
 *Use the Google Flights API to power travel apps, fare tracking, and analytics with reliable, structured results.*
 
-Last Updated: 2026.08.31
+Last Updated: 2026.09.01
