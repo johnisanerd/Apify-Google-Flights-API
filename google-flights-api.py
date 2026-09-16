@@ -28,7 +28,7 @@ client = ApifyClient(os.getenv("APIFY_API_TOKEN"))
 run_input = {
     "departure_id": "LAX",
     "arrival_id": "JFK",
-    "outbound_date": "2026-06-17",   # YYYY-MM-DD (one-way: omit return_date)
+    "outbound_date": "2026-10-12",   # YYYY-MM-DD (one-way: omit return_date)
     "adults": 1,
     "currency": "USD",
     "hl": "en",                      # language code

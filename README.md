@@ -92,7 +92,7 @@ uv run python google-flights-api.py
 {
   "departure_id": "LAX",
   "arrival_id": "JFK",
-  "outbound_date": "2026-06-17",
+  "outbound_date": "2026-10-12",
   "adults": 1,
   "currency": "USD",
   "max_pages": 1
@@ -128,7 +128,7 @@ uv run python google-flights-api.py
 {
   "departure_id": "LAX",
   "arrival_id": "JFK",
-  "outbound_date": "2026-06-17",
+  "outbound_date": "2026-10-12",
   "adults": 1,
   "fetch_booking_options": true,
   "max_pages": 1
@@ -171,7 +171,7 @@ A real result for `LAX` to `JFK` (one item per page; `best_flights` legs and the
     "trip_type_description": "One-way",
     "departure_id": "LAX",
     "arrival_id": "JFK",
-    "outbound_date": "2026-06-17",
+    "outbound_date": "2026-10-12",
     "adults": 1,
     "currency": "USD",
     "language": "en",
@@ -193,16 +193,16 @@ A real result for `LAX` to `JFK` (one item per page; `best_flights` legs and the
       "total_duration": 590,
       "flights": [
         {
-          "departure_airport": { "name": "Los Angeles International Airport", "id": "LAX", "time": "2026-06-17 09:24" },
-          "arrival_airport": { "name": "Charlotte Douglas International Airport", "id": "CLT", "time": "2026-06-17 17:28" },
+          "departure_airport": { "name": "Los Angeles International Airport", "id": "LAX", "time": "2026-10-12 09:24" },
+          "arrival_airport": { "name": "Charlotte Douglas International Airport", "id": "CLT", "time": "2026-10-12 17:28" },
           "airline": "American",
           "flight_number": "AA 2570",
           "travel_class": "Economy",
           "duration": 304
         },
         {
-          "departure_airport": { "name": "Charlotte Douglas International Airport", "id": "CLT", "time": "2026-06-17 20:11" },
-          "arrival_airport": { "name": "John F. Kennedy International Airport", "id": "JFK", "time": "2026-06-17 22:14" },
+          "departure_airport": { "name": "Charlotte Douglas International Airport", "id": "CLT", "time": "2026-10-12 20:11" },
+          "arrival_airport": { "name": "John F. Kennedy International Airport", "id": "JFK", "time": "2026-10-12 22:14" },
           "airline": "American",
           "flight_number": "AA 1727",
           "travel_class": "Economy",
